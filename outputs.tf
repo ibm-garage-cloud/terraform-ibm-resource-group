@@ -1,5 +1,5 @@
-#output "myoutput" {
-#  description = "Description of my output"
-#  value       = "value"
-#  depends_on  = [<some resource>]
-#}
+output "resourceGroupNames" {
+  description = "List of resource group names"
+  value       = local.resourceGroupNames
+  depends_on  = [ibm_resource_group.resource_group]
+}
