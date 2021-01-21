@@ -1,11 +1,19 @@
 id: github.com/ibm-garage-cloud/terraform-ibm-resource-group
-name: ""
+name: "ibm-resource-group"
 type: terraform
-description: ""
+description: "Creates one or more resource groups in the account"
 tags:
-  - tools
-  - devops
+  - ibm cloud
+  - resource group
+  - account
 versions:
+  - platforms: []
+    dependencies: []
+    variables: [{name: resourceGroupNames, type: string, description: Comma-separated list of resource group names that should be created}]
+    version: v1.0.0
+    outputs:
+      - name: resourceGroupNames
+        description: List of resource group names
   - platforms:
       - kubernetes
       - ocp3
@@ -34,28 +42,3 @@ versions:
         description: 'output" { #  description = "Description of my'
       - name: 'output" #  value       = "value" #  depends_on  = [<some resource>] #}'
         description: 'output" #  value       = "value" #  depends_on  = [<some resource>] #}'
-#    - name: cluster_type
-#      moduleRef:
-#        id: cluster
-#        output: type_code
-#    - name: cluster_ingress_hostname
-#      moduleRef:
-#        id: cluster
-#        output: ingress_hostname
-#    - name: cluster_config_file
-#      moduleRef:
-#        id: cluster
-#        output: config_file_path
-#    - name: tls_secret_name
-#      moduleRef:
-#        id: cluster
-#        output: tls_secret_name
-#    - name: releases_namespace
-#      moduleRef:
-#        id: namespace
-#        output: name
-#        discriminator: tools
-#    - name: icon_url
-#      moduleRef:
-#        id: dashboard
-#        output: base_icon_url
