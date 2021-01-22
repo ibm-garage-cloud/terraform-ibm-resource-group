@@ -1,5 +1,9 @@
-output "resourceGroupNames" {
+output "names" {
   description = "List of resource group names"
-  value       = local.resourceGroupNames
-  depends_on  = [data.ibm_resource_group.resource_group]
+  value       = data.ibm_resource_group.resource_group.*.name
+}
+
+output "ids" {
+  description = "List of ids of generated resource groups"
+  value       = data.ibm_resource_group.resource_group.*.id
 }
