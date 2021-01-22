@@ -10,6 +10,13 @@ versions:
   - platforms: []
     dependencies: []
     variables: [{name: resourceGroupNames, type: string, description: Comma-separated list of resource group names that should be created}]
+    version: v1.1.0
+    outputs:
+      - name: resourceGroupNames
+        description: List of resource group names
+  - platforms: []
+    dependencies: []
+    variables: [{name: resourceGroupNames, type: string, description: Comma-separated list of resource group names that should be created}]
     version: v1.0.0
     outputs:
       - name: resourceGroupNames
