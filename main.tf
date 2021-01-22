@@ -11,3 +11,10 @@ resource "ibm_resource_group" "resource_group" {
 
   name  = local.resourceGroupNames[count.index]
 }
+
+data "ibm_resource_group" "resource_group" {
+  count = length(local.resourceGroupNames)
+  depends_on = [ibm_resource_group.resource_group]
+
+  name  = local.resourceGroupNames[count.index]
+}
