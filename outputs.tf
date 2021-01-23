@@ -10,11 +10,5 @@ output "ids" {
 
 output "groups" {
   description = "List of group names and ids"
-  value       = [
-    for rg in data.ibm_resource_group.resource_group:
-      {
-        id   = rg.id
-        name = rg.name
-      }
-  ]
+  value       = data.ibm_resource_group.resource_group
 }
