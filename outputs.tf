@@ -7,3 +7,8 @@ output "ids" {
   description = "List of ids of generated resource groups"
   value       = data.ibm_resource_group.resource_group.*.id
 }
+
+output "groups" {
+  description = "List of group names and ids"
+  value       = data.ibm_resource_group.resource_group
+}
