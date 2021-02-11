@@ -3,16 +3,16 @@ provider "ibm" {
 }
 
 locals {
-  resourceGroupNames = split(",", var.resourceGroupNames)
+  resourceGroupNames = var.names
 }
 
-resource "ibm_resource_group" "resource_group" {
+resource ibm_resource_group resource_group {
   count = length(local.resourceGroupNames)
 
   name  = local.resourceGroupNames[count.index]
 }
 
-data "ibm_resource_group" "resource_group" {
+data ibm_resource_group resource_group {
   count = length(local.resourceGroupNames)
   depends_on = [ibm_resource_group.resource_group]
 
