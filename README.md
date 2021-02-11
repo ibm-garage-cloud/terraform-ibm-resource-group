@@ -9,7 +9,6 @@ The module depends on the following software components:
 ### Command-line tools
 
 - terraform - v12
-- kubectl
 
 ### Terraform providers
 
@@ -18,10 +17,10 @@ The module depends on the following software components:
 ## Example usage
 
 ```hcl-terraform
-module "ibm_resource_groups" {
+module "resource_groups" {
   source = "github.com/ibm-garage-cloud/terraform-ibm-resource-group.git"
 
-  resourceGroupNames = var.resource_group_name
+  names = split(",", var.resource_group_name)
 }
 ```
 
