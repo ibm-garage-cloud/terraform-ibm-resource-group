@@ -13,8 +13,8 @@ resource ibm_resource_group resource_group {
 }
 
 data ibm_resource_group resource_group {
-  count = length(local.resourceGroupNames)
   depends_on = [ibm_resource_group.resource_group]
+  count = length(local.resourceGroupNames)
 
   name  = local.resourceGroupNames[count.index]
 }
