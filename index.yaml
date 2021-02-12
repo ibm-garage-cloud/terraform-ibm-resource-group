@@ -10,6 +10,17 @@ versions:
   - platforms: []
     dependencies: []
     variables: [{name: names, type: list(string), description: List of resource group names that should be created}]
+    version: v1.4.1
+    outputs:
+      - name: names
+        description: List of resource group names
+      - name: ids
+        description: List of ids of generated resource groups
+      - name: groups
+        description: List of group names and ids
+  - platforms: []
+    dependencies: []
+    variables: [{name: names, type: list(string), description: List of resource group names that should be created}]
     version: v1.4.0
     outputs:
       - name: names
