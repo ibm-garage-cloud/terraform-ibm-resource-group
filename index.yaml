@@ -1,4 +1,4 @@
-id: github.com/ibm-garage-cloud/terraform-ibm-resource-group
+id: github.com/cloud-native-toolkit/terraform-ibm-resource-group
 name: "ibm-resource-group"
 type: terraform
 description: "Creates one or more resource groups in the account"
@@ -7,6 +7,17 @@ tags:
   - resource group
   - account
 versions:
+  - platforms: []
+    dependencies: []
+    variables: [{name: names, type: list(string), description: List of resource group names that should be created}]
+    version: v2.0.0
+    outputs:
+      - name: names
+        description: List of resource group names
+      - name: ids
+        description: List of ids of generated resource groups
+      - name: groups
+        description: List of group names and ids
   - platforms: []
     dependencies: []
     variables: [{name: names, type: list(string), description: List of resource group names that should be created}]
