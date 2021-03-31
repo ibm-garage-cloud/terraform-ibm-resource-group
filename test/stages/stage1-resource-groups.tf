@@ -1,5 +1,5 @@
 module "resource_groups" {
   source = "./module"
 
-  names = "test-resource-group"
+  names = split(",", "test-resource-group")
 }
