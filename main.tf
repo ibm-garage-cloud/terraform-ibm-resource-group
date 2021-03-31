@@ -1,6 +1,3 @@
-provider "ibm" {
-  version = ">= 1.17.0"
-}
 
 locals {
   resourceGroupNames = var.names
