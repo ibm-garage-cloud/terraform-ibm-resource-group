@@ -1,17 +1,12 @@
 
-locals {
-  resourceGroupNames = var.names
-}
-
 resource ibm_resource_group resource_group {
-  count = length(local.resourceGroupNames)
+  count = var.provision ? 1 : 0
 
-  name  = local.resourceGroupNames[count.index]
+  name  = var.resource_group_name
 }
 
 data ibm_resource_group resource_group {
   depends_on = [ibm_resource_group.resource_group]
-  count = length(local.resourceGroupNames)
 
-  name  = local.resourceGroupNames[count.index]
+  name  = var.resource_group_name
 }

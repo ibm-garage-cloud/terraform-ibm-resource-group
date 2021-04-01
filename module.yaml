@@ -1,6 +1,6 @@
 name: "ibm-resource-group"
 type: terraform
-description: "Creates one or more resource groups in the account"
+description: "Creates a resource groups in the account"
 tags:
     - ibm cloud
     - resource group
@@ -8,4 +8,6 @@ tags:
 versions:
 - platforms: []
   dependencies: []
-  variables: []
+  variables:
+    - name: resource_group_name
+      scope: global
