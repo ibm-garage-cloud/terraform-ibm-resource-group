@@ -1,6 +1,6 @@
 # IBM Cloud Resource Group module
 
-Terraform module to create one or more resource groups in an IBM Cloud account.
+Terraform module to create a resource groups in an IBM Cloud account.
 
 ## Software dependencies
 
@@ -8,7 +8,7 @@ The module depends on the following software components:
 
 ### Command-line tools
 
-- terraform - v12
+- terraform - v13
 
 ### Terraform providers
 
@@ -20,7 +20,7 @@ The module depends on the following software components:
 module "resource_groups" {
   source = "github.com/ibm-garage-cloud/terraform-ibm-resource-group.git"
 
-  names = split(",", var.resource_group_name)
+  resource_group_name = var .resource_group_name
 }
 ```
 
