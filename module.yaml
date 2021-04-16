@@ -11,3 +11,5 @@ versions:
   variables:
     - name: resource_group_name
       scope: global
+    - name: ibmcloud_api_key
+      scope: global
