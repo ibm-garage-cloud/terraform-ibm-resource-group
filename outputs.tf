@@ -13,3 +13,8 @@ output "group" {
   description = "The resource group object"
   value       = data.ibm_resource_group.resource_group
 }
+
+output "provision" {
+  description = "Flag indicating whether the resource group was provisioned"
+  value       = var.provision
+}
